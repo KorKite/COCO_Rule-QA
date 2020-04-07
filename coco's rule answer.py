@@ -22,7 +22,7 @@ class queue:
 
     def delete_last(self):
 
-        if self.head == None:
+    	if self.head == None:
             return "No COCO"
 
         else:
@@ -55,7 +55,7 @@ for i in range(a):
         answer.append(data)
 
 if len(answer) == 0:
-	  print(-1)
+    print(-1)
 else:
-		for i in answer:
-				print(i)
+    for i in answer:
+        print(i)
