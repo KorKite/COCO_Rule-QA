@@ -32,6 +32,6 @@ count = 0
 
 for i in range(n):
     if not visited[i]:
-        dfs_search(n, visited, i)
+        dfs_search(n, visited, i) #혹은 bfs_search(n, visited, i)
         count += 1
 print(count)
