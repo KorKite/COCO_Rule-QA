@@ -7,12 +7,27 @@ for i in range(m):
     graph[b-1][a-1] = True
 
 visited = [False for i in range(n)]
-def search(size, visited, start_node):
+def dfs_search(size, visited, start_node):
     visited[start_node] = True
     nodes = graph[start_node]
     for i in range(size):
         if nodes[i] == True and visited[i] == False:
             search(size, visited, i)
+            
+def bfs_search(size, visited, start_node):
+    visited[start_node] = True
+    queue = []
+    queue.append(start_node)
+    while len(queue) != 0:
+        v = queue.pop(0)
+        if not visited[v]:
+            visited[v] = True
+        nodes = graph[v]
+        for i in range(size):
+            if nodes[i] == True and not visited[i]:
+                queue.append(i)
+    return
+
 count = 0
 
 for i in range(n):
