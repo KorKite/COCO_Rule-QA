@@ -12,7 +12,7 @@ def dfs_search(size, visited, start_node):
     nodes = graph[start_node]
     for i in range(size):
         if nodes[i] == True and visited[i] == False:
-            search(size, visited, i)
+            dfs_search(size, visited, i)
             
 def bfs_search(size, visited, start_node):
     visited[start_node] = True
